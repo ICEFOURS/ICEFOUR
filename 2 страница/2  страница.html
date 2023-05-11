@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <link rel="shortcut icon" href="two.png" type="image/x-icon">
+    <title>Системы счисления</title>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+</head>
+<body>
+    <body bgcolor="#000" background="Фон.JPG"></body>
+        <a href="file:///C:/Users/ICEFOUR/Desktop/Новая%20папка/Титульник/Титульник.html" class="btn">Начало</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+    <style>
+        body {
+    background-size: 100%;
+    background-attachment:fixed;
+    }
+        .container{
+            text-align: center;
+        }
+    .btn {
+        display: inline-block;
+        background: #8C959D;
+        color: #fff;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+    </style>   
+        <h1>Система счисления</h1>
+            <h2>Система счисления (далее СС) - совокупность приёмов и правил для записи чисел цифровыми знаками. Наиболее известна десятичная СС, в которой для записи чисел используются цифры 0,1,:,9. Способов записи чисел цифровыми знаками существует бесчисленное множество. Любая предназначенная для практического применения СС должна обеспечивать:</h2>
+                <div>
+                <div style='text-align:left'>
+                <h3><li>возможность представления любого числа в рассматриваемом диапазоне величин;</li></h3>
+                <h3><li>единственность представления (каждой комбинации символов должна соответствовать одна и только одна величина);</li></h3>
+                <h3><li>простоту оперирования числами;</li></h3>
+                </div>
+            <h2>Количество знаков или символов, используемых для изображения числа, называется основанием системы счисления.
+                Позиционные системы счисления имеют ряд преимуществ перед непозиционными: удобство выполнения арифметических и логических операций, а также представление больших чисел, поэтому в цифровой технике применяются позиционные системы счисления.
+                Запись чисел может быть представлена в виде</h2>
+                <img src="image002.gif" width="350" height="90">
+            <h2>Каждая СС имеет свои правила арифметики (таблица умножения, сложения). Поэтому, производя какие-либо операции над числами, надо помнить о СС, в которой они представлены.</h2>
+        <h3>К примеру, самый простой калькулятор для легких вычислений:</h3>
+        <head>
+            <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+                integrity=
+        "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+                crossorigin="anonymous" 
+                referrerpolicy="no-referrer"></script>
+            <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+                integrity=
+        "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+                crossorigin="anonymous" 
+                referrerpolicy="no-referrer"></script>
+            <style>
+                table {
+                    border: 1px solid black;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+          
+                input[type="button"] {
+                    width: 100%;
+                    padding: 20px 40px;
+                    background-color: green;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 5px;
+                }
+          
+                input[type="text"] {
+                    padding: 20px 30px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 5px;
+                    border: 2px solid black;
+                }
+            </style>
+        </head>
+          
+        <body>
+            <table id="calcu">
+                <tr>
+                    <td colspan="3"><input type="text" id="result"></td>
+                    <td><input type="button" value="c" onclick="clr()" /> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="dis('1')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="2" onclick="dis('2')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="3" onclick="dis('3')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="/" onclick="dis('/')" 
+                                onkeydown="myFunction(event)"> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="dis('4')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="5" onclick="dis('5')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="6" onclick="dis('6')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="*" onclick="dis('*')" 
+                                onkeydown="myFunction(event)"> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="dis('7')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="8" onclick="dis('8')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="9" onclick="dis('9')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="-" onclick="dis('-')"
+                                onkeydown="myFunction(event)"> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" onclick="dis('0')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="." onclick="dis('.')" 
+                                onkeydown="myFunction(event)"> </td>
+                    <td><input type="button" value="=" onclick="solve()"> </td>
+          
+                    <td><input type="button" value="+" onclick="dis('+')" 
+                                onkeydown="myFunction(event)"> </td>
+                </tr>
+            </table>
+          
+            <script>
+                function dis(val) {
+                    document.getElementById("result").value += val
+                }
+          
+                function myFunction(event) {
+                    if (event.key == '0' || event.key == '1' 
+                        || event.key == '2' || event.key == '3'
+                        || event.key == '4' || event.key == '5' 
+                        || event.key == '6' || event.key == '7'
+                        || event.key == '8' || event.key == '9' 
+                        || event.key == '+' || event.key == '-'
+                        || event.key == '*' || event.key == '/')
+                        document.getElementById("result").value += event.key;
+                }
+          
+                var cal = document.getElementById("calcu");
+                cal.onkeyup = function (event) {
+                    if (event.keyCode === 13) {
+                        console.log("Enter");
+                        let x = document.getElementById("result").value
+                        console.log(x);
+                        solve();
+                    }
+                }
+          
+                function solve() {
+                    let x = document.getElementById("result").value
+                    let y = math.evaluate(x)
+                    document.getElementById("result").value = y
+                }
+          
+                function clr() {
+                    document.getElementById("result").value = ""
+                }
+            </script>
+            <p><a href="file:///C:/Users/ICEFOUR/Desktop/Новая%20папка/Титульник/Титульник.html"><--Назад</a></p>
+            <p><a href="file:///C:/Users/ICEFOUR/Desktop/Новая%20папка/3%20страница/3%20страница.html">Вперёд--></a></p>
+    </div>
+        </div>
+            </div>
+</body>
+</html>
